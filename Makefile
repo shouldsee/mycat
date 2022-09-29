@@ -10,6 +10,6 @@ install-supervisord:
 	rm -f /etc/systemd/system/supervisord.service
 	cp -f etc/supervisord.service /etc/systemd/system
 	chown root:root /etc/systemd/system/supervisord.service
-	systemctl daemon-reload
+	systemctl daemon-reload && systemctl enable supervisord
 
 
